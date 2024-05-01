@@ -1,17 +1,16 @@
 <%-- 
-    Document   : login
-    Created on : May 24, 2022, 3:17:38 PM
-    Author     : Aveesh
+    Document   : Admin
+    Created on : May 24, 2022, 9:14:56 PM
+    Author     : dell
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <style>
-            * 
+	
+    <style>
+        * 
 {
     margin: 0;
     padding: 0;
@@ -23,7 +22,7 @@ body
 {
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(456.jpg);
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(963.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -162,37 +161,49 @@ body
         display: block;
     }
 }
-        </style>
+        
+        
+        
+    </style>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 
 
-	<title>Login</title>
+	<title>New Account</title>
 </head>
 <body>
-    
 	<div class="container">
 		<form action="" method="POST" name="login" class="login-form">
-			<p class="login-text" style="font-size: 2rem; font-weight: 800;">Login</p>
-            <p class="login-text-1" style="font-size: 1rem; font-weight: 700;">***Welcome to SriLankan Airline***</p>
+            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Create an Account</p>
+
+            
 			<div class="input-group">
-				<input type="text" placeholder="Enter your Membership ID" name="membership" id="membership" value="" required>
+				<input type="text" placeholder="Username" name="ausername" id="ausername" value="" required>
 			</div>
+
 			<div class="input-group">
-				<input type="password" placeholder="Enter your Password" name="password" id="password" value="" required>
-			</div>
+				<input type="password" placeholder="Password" name="apassword" id="apassword" value="" required>
+            </div>
 
             <div class="">
-                <input type="checkbox" name="checkbox" value="Clear" class="checkbox" onchange="document.getElementById('password').type=this.checked?'text':'password'">
+                <input type="checkbox" name="checkbox" value="Clear" class="checkbox" onchange="document.getElementById('apassword').type=this.checked?'text':'password'">
                 <font>Show Password</font>
             </div><br>
-
+ 
 			<div class="input-group">
-                <input type="button" name="submit" value="Login" class="btn" onclick="loggingform()">
+                <input type="button" name="submit" value="Create" class="btn" onclick="loggingform()">
+
+
 			</div>
 
-            <div class="input-group">
+			 <div class="input-group">
                 <input type="reset" name="reset" value="Clear" class="btn" onclick="Closeform()">
             </div>
+			<p class="login-admin-text">Go to login? <a href="index.html">Login Here</a>.</p>
 		</form>
 	</div>
 </body>

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : main
-    Created on : May 24, 2022, 2:57:54 PM
+    Document   : help
+    Created on : May 24, 2022, 3:20:46 PM
     Author     : Aveesh
 --%>
 
@@ -8,9 +8,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>SriLankan Airlines</title>
+        <title>SriLankan  Airlines</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            
 :root
 {
     --transition: all 0.7s ease;
@@ -83,7 +84,7 @@ img
 {
     width: 100%;
     display: block;
-    transition : var(--transition);
+    transition: var(--transition);
 }
 
 /*body
@@ -114,7 +115,7 @@ img
 {
     cursor: pointer;
     letter-spacing: 2px;
-    transition : var(--transition);
+    transition: var(--transition);
 }
 
 .head-top span:hover
@@ -157,7 +158,7 @@ img
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
     cursor: pointer;
-    transition : var(--transition);
+    transition: var(--transition);
 }
 
 .head-btn:hover
@@ -270,7 +271,6 @@ img
     border-bottom: 5px solid var;
     width: 235px;
     margin: 15px 0;
-/*    text-align: center;*/
 }
 
 .width
@@ -350,7 +350,7 @@ img
     width: 100%;
 }
 
-.book-form label, .book-form-1 label
+.book-form label , .book-form-1 label
 {
     font-weight: 600;
     word-spacing: 5px;
@@ -418,7 +418,6 @@ img
 .rooms
 {
     margin: 40px 0;
-/*    text-align: center;*/
 }
 
 .room
@@ -426,9 +425,8 @@ img
     margin: 45px 0;
     padding-bottom: 25px;
     margin-right: 50%;
-    background: linear-gradient(to bottom right, #00ff00 , #ff0000 , #ff7b00 );
+    background: linear-gradient(to right, #660033 0%, #660066 100%);
     color: #fff;
-    border-radius: 20px;
 }
 
 .room-text
@@ -574,20 +572,26 @@ img
     {
         width: 100%;
     }
-}
 
+}
 
 footer{
- position: relative;
+ 
  bottom: 0;
 }
+
+.footer_heading {
+    margin-left: 200px;
+    font-size: 2px;
+}
+
 .footer-distributed{
  background-color: #292c2f;
  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
  box-sizing: border-box;
  width: 100%;
  text-align: left;
- font: bold 16px sans-serif;
+ /*font: bold 16px sans-serif;*/
  
  padding: 55px 50px;
  margin-top: 80px;
@@ -725,6 +729,7 @@ footer{
  font: bold 14px sans-serif;
  
  }
+}
  
  .footer-distributed .footer-left,
  .footer-distributed .footer-center,
@@ -743,10 +748,6 @@ footer{
  font-size: auto;
  }
 
-}
-.centered-text {
-  text-align: right;
-}
 
         </style>
         
@@ -780,7 +781,7 @@ footer{
             <div class = "head-bottom flex">
                 <h2>WELCOME<br>TO<br><font color="#e6ac00">SriLankan Airlines</font></h2><br><br>
                 <p>Don't just fly,<br>FLY BETTER.</p>
-                <button type = "button" class = "head-btn" onclick="booknow()">*** Book Now ***</button>
+                <button type = "button" class = "head-btn" onclick="booknow()">*** Book a Flight ***</button>
             </div>
         </header>
  
@@ -789,127 +790,71 @@ footer{
             </span>
 
             <ul class = "navbar">
-                <li><a href = "header">home</a></li>
-                <li><a href = "book">plan & book</a></li>
-                <li><a href = "Travel info.html">travel info</a></li>
+                <li><a href = "#header">home</a></li>
+                <li><a href = "#book">plan & book</a></li>
+                <li><a href = "#info">travel info</a></li>
                 <li><a href = "index.html">login</a></li>
-                <li><a href = "help.html">help</a></li>
+                <li><a href = "#help">help</a></li>
             </ul>
             <button class = "btn sign-out" onclick="loginform()">Log Out</button>
             
         </div>
 
-        <section class = "rooms width" id = "rooms">
-            <div class = "title">
-                <h4>Enhance Your Experience in SriLankan Airlines</h4>
-            </div>
-            <div class = "rooms-container">
-                
-                <article class = "room">
-                    <div class = "room-image">
-                        <img src = "busi.jpg" alt = "room image">
-                    </div>
-                    <div class = "room-text">
-                        <h3>Business Class Upgrades</h3>
-                       <p>Advance Seat Reservation
-Prefer a window or an Aisle seat? Now you can secure your preferred seat well in advance at a fee before online check-in opens!<br>
-Bid Now for Business Class<br>
-Simply place your bid online after purchasing your Economy Class ticket and stand a chance to obtain an upgrade to Business Class
-</p> 
-                        <button type = "button" class = "btn" onclick="booknow()">Know More</button>
-                    </div>
-                </article>
-                
-                <article class = "room">
-                    <div class = "room-image">
-                        <img src = "stu.jpg" alt = "room image">
-                    </div>
-                    <div class = "room-text">
-                        <h3>Student Special</h3>
-                        <p>Travelling for studies? Book your flight on phoenix.com and get exclusive benefits for your student visa!
-<br>
-Whether you are flying off for your college education or you are off for your post-graduate studies, being away from home is difficult. So, take all your comforts with our free baggage allowance and claim the ticket discount for your loved ones.
-</p>
-
-
-                        <button type = "button" class = "btn" onclick="knowmore()">Know More</button>
-                    </div>
-                </article>
-                
-                
-                <article class = "room">
-                    <div class = "room-image">
-                        <img src = "wifi.jpg" alt = "room image">
-                    </div>
-                    <div class = "room-text">
-                        <h3>In-flight WiFi</h3>
-                        <p>Stay productive while you fly with in-flight Wi-Fi on Phoenix Airlines. Answer your emails, surf the internet or chat with your friends online - just as you would do on the ground.<br>
-The in-flight Wi-Fi facility is available for purchase on our new A330-300 and A320/321 Neo fleet. We will let you know if your flight is equipped with our inflight Wi-Fi facility during the flight.
-</p>
-
-
-                        <button type = "button" class = "btn" onclick="knowmore()">Know More</button>
-                    </div>
-                </article>
-                 <article class = "room">
-                    <div class = "room-image">
-                        <img src = "bag.jpg" alt = "room image">
-                    </div>
-                    <div class = "room-text">
-                        <h3>Baggage Allowance</h3>
-                        <p>Pre-purchase excess baggage at discounted rates<br>
-Save time, money and avoid hassle at the airport by pre-purchasing excess baggage at a discount from airport rates on Srilankan.com.
-<br>
-You can purchase discounted extra baggage while booking your flight or via our Manage my Booking feature on Srilankan.com even 3 hours prior to your scheduled departure!
-
-</p>
-                        <button type = "button" class = "btn" onclick="knowmore()">Know More</button>
-                    </div>
-                </article>
-                
-            </div>
-        </section>
-
-
         <section class = "customers" id = "customers">
             <div class = "width">
                 <div class = "title">
-                    <h3><font color="#fff">Latest Fares</font></h3>
+                    <h3><font color="#fff">HELP CENTER</font></h3>
                 </div>
-                <div class = "customers-container">
+                 <div class = "customers-container">
                     
                     <div class = "customer">
                         
-                        <h3>Pre-purchase excess baggage</h3>
+                        <h3>Travel Requirements Guide</h3>
                         
-                        <p>Pre-purchase excess baggage at discounted rates
-Save time, money and avoid hassle at the airport by pre-purchasing excess baggage at a discount from airport rates on Phoenix.com.<br>
+                        <p>We know navigating travel requirements can be challenging – and we are here to help. This page can be used as a guide to help make sure you’ve got all your requirements covered before you fly. <br>
+                        For everyone’s safety, we are requiring all customers to confirm at check-in that those in their itinerary are not currently required to isolate or quarantine due to COVID-19 exposure, symptoms or a positive diagnosis under current applicable COVID-19 guidelines, and that they will wear a face mask throughout their travel. Review the full Safety Commitment details. 
 
-You can purchase discounted extra baggage while booking your flight or via our Manage my Booking feature on Srilankan.com even 3 hours prior to your scheduled departure!
 </p>
+<button type = "button" class = "btn" onclick="booknow()">Know More</button>
                         
                     </div>
                     
                     
                     <div class = "customer">
                     
-                        <h3>Why Book on Phoenix.com</h3>
-                        
-                        <p>There are so many benefits to online ticket booking on Phoenix.com!
-<br>
-Your first date change is free!<br>
-Your Date Change Penalty is totally waived off before you travel when you book your tickets on Srilankan.com. You simply have to pay the fare difference if any.<br>
-<br>
-*Please note that this facility is not valid for discounted tickets or tickets with special conditions 
+                        <h3>Manage your Trip</h3>                                             
+                        <p><a href = "#header">Change or Cancel Flight </a><br>
+                            <a href = "#header">Manage Seats and Upgrades</a><br>
+                            <a href ="#header" >Request refunds</a>
+
+                        <h3>Day of Travel</h3>                                             
+                        <p><a href = "#header">Begin Check-in </a><br>
+                            <a href = "#header">Calculate Baggage Fees</a><br>
+                            <a href ="#header" >Make Same Day Flight Changes</a>
 </p>
+
+<h3>Still Need to Contact Us?</h3>
+<p> If you purchased a ticket from a third-party travel site or agency and need to make a change or cancellation, refer directly to your third-party travel site or travel agent for servicing/assistance needs.
+
+
+If you purchased a Delta Vacations package, please visit <a href ="#header" >SriLankanAirlines.com/vacations.</p></a>
+
+
+
+
                     </div>
 
     </section>
 
-        <script src="script.js"></script>
 
-<!-- footer area -->
-<footer class="footer-distributed">
+
+
+
+
+
+        
+        <script src="script.js"></script>
+        <footer class="footer-distributed">
  
  <div class="footer-left">
  
@@ -944,7 +889,7 @@ Your Date Change Penalty is totally waived off before you travel when you book y
  
  <div>
  <i class="fa fa-envelope"></i>
- <p><a href="mailto:support@company.com">SriLankanAirlines@gmail.com</a></p>
+ <p><a href="mailto:support@company.com">SrilankanAirlines@gmail.com</a></p>
  </div>
  
  </div>
@@ -953,7 +898,7 @@ Your Date Change Penalty is totally waived off before you travel when you book y
  
  <p class="footer-company-about">
  <span>About the Organization </span>
- Launched in 1978, SriLankan Airlines is an award winning airline with a solid reputation for service, comfort, safety, reliability, and punctuality
+ Launched in 1979, SriLankan  Airline is an award winning airline with a solid reputation for service, comfort, safety, reliability, and punctuality
 
  </p>
  
