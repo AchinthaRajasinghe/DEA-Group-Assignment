@@ -40,64 +40,126 @@
                 color: #ddd;
             }
 
-            .container {
-                width: 50%;
-                margin: 0 auto;
-            }
-
-            h2 {
-                color: #333;
-            }
-
-            label {
-                display: block;
-                margin: 10px 0;
-            }
-
-            input, textarea {
-                width: 100%;
-                padding: 8px;
-                margin: 6px 0;
-                box-sizing: border-box;
-            }
-
-            button {
-                background-color: #4CAF50;
-                color: white;
-                padding: 10px 15px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .contact-section {
-                margin-top: 20px;
-                background-color: #f2f2f2;
+            *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .contact{
+            min-height: 100vh;
+            background-color: #e8f0fe;
+            padding: 50px;
+            text-align: center;
+        }
+        .container{
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .container h2{
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .contact-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+        .contact-form{
+            text-align: left;
+        }
+        .contact-form h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group{
+            margin-bottom: 20px;
+        }
+        input, textarea{
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        input:focus,
+        textarea:focus{
+            outline: none;
+            box-shadow: 0 0 8px #bbb;
+        }
+        button{
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover{
+            background-color: #45a049;
+        }
+        .contact-info{
+            text-align: left;
+        }
+        .contact-info h3{
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .contact-info p{
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .contact-info i{
+            color: #4caf50;
+            margin-right: 10px;
+        }
+        @media screen and(max-width: 768px) {
+            .container{
                 padding: 20px;
-                border-radius: 10px;
             }
-
-            .contact-details {
-                margin-top: 10px;
-
-                button:hover {
-                    background-color: #45a049;
-                }
+            .contact-wrapper{
+                grid-template-columns: 1fr;
+            }
+        }
             </style>
 
         </head>
         <body>
             <jsp:include page="includes/navbar.jsp"/>
-            <div class="container">
-                <div class="contact-section">
-                    <h2>Contact Details</h2>
-                    <div class="contact-details">
-                        <p><strong>Email:</strong> info@greensupermarket.com</p>
-                        <p><strong>Phone:</strong> +94 11-123-4567</p>
-                        <p><strong>Address:</strong> 123 Green Street, Colombo, Srilanka</p>
-                    </div>
+            <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="Message" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i> +9411 852 8520</p>
+                    <p><i class="fas fa-envelope"></i>FreshStopinfo@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>No 45/A High Level Rd, Nugegoda, Sri Lanka</p>
                 </div>
             </div>
+        </div>
+
+    </section>
         </body>
         <jsp:include page="includes/footer.jsp"/>
     </html>
